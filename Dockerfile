@@ -13,7 +13,7 @@ COPY entrypoint.sh /app/
 RUN chmod +x /app/entrypoint.sh
 
 # Copy the Python scripts to the container
-COPY monitor.py query.py usage.py /app/
+COPY monitor.py query.py usage.py initial-run.py /app/
 
 # Environment variables for database configuration
 ENV DB_HOST=localhost

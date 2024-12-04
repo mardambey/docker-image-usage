@@ -29,8 +29,10 @@ elif [ "$1" == "query" ]; then
   python3 /app/query.py
 elif [ "$1" == "usage" ]; then
   python3 /app/usage.py
+elif [ "$1" == "initial" ]; then
+  python3 /app/initial-run.py
 else
-  echo "Usage: docker run <image> [monitor|query|usage]"
+  echo "Usage: docker run <image> [monitor|query|usage|initial]"
   exit 1
 fi
 
