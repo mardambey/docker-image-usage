@@ -31,8 +31,17 @@ elif [ "$1" == "usage" ]; then
   python3 /app/usage.py
 elif [ "$1" == "initial" ]; then
   python3 /app/initial-run.py
+elif [ "$1" == "unused" ]; then
+  python3 /app/find-unused.py
+
 else
-  echo "Usage: docker run <image> [monitor|query|usage|initial]"
+  echo "Usage: docker run <image> [monitor|query|usage|initial|unused]"
+  echo
+  echo "       monitor   Run the monitoring server"
+  echo "       query     Run some common queries on the data"
+  echo "       usage     Show current image usage"
+  echo "       initial   Look for running containers, insert their images"
+  echo "       unused    Show unused images and can --print-rm-commands"
   exit 1
 fi
 
